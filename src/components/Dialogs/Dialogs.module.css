@@ -1,0 +1,80 @@
+*{
+    box-sizing: border-box;
+}
+.dialogs{
+    display: grid;
+    grid-template-columns: 10fr 2fr;
+    height: 100%;
+}
+
+.dialogsItems{
+    padding: 10px;
+    border-left: 1px solid #ea9d7d;
+    box-shadow: -4px 2px 5px #ea9d7d;
+    background-color: #ffebcd66;
+}
+.dialogsItems .active{
+    color: #9370d8;
+}
+
+.dialog{
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 40px;
+    text-align: center;
+    border-bottom: 1px solid #ea9d7d;
+    margin-bottom: 20px;
+}
+
+.messages{
+    display: flex;
+    flex-direction: column;
+}
+.message:nth-child(even){
+    text-align: right;
+}
+
+.message p{
+    border: 1px solid #ea9d7d;
+    border-radius: 25px;
+    padding: 10px 20px;
+    margin-bottom: 15px;
+    text-align: right;
+    display: inline-block;
+    box-shadow: 4px 4px 5px #ea9d7d;
+}
+
+.img{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-left: 10px;
+}
+.messagesBlock{
+    flex: 1 1 auto;
+    padding: 30px 90px;
+}
+.newMessage{
+    display: flex;
+    height: 60px;
+    flex-wrap: nowrap;
+    padding: 0 10px;
+    margin-bottom: 35px;
+}
+.textarea{
+    width: 85%;
+    height: 60px;
+    border-radius: 5px;
+}
+.button{
+    padding: 8px 25px;
+    border-radius: 10px;
+    margin: 0px 0px 0px 20px;
+    height: 100%;
+}
+
+.button,
+.button:active,
+.button:focus {
+    outline: none;
+}

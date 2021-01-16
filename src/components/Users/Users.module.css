@@ -1,0 +1,51 @@
+.imgUsers{
+    width:100px;
+}
+.container{
+    display: flex;
+    padding: 20px 0px;
+    flex-wrap: nowrap;
+}
+.imgItem{
+    flex: 0 0 130px;
+    height: 100px;
+    overflow: hidden;
+}
+.infoItem{
+    flex: 1 1 auto;
+}
+
+.locationItem{
+    flex: 0 1 200px;
+}
+.buttonItem{
+    flex: 0 1 120px;
+    text-align: center;
+
+}
+button{
+    min-width: 140px;
+    display: block;
+    padding: 5px 20px;
+    margin: 25px auto;
+}
+
+.pageNumber{
+    font-weight: 600;
+    font-size: 18px;
+    color: indianred;
+    margin: 0 10px;
+    cursor: pointer;
+}
+.activePageNumber{
+    font-weight: 700;
+    color: #9370d8;
+    font-size: 22px;
+    cursor: pointer;
+    margin: 0 11px;
+}
+
+.block {
+    width: 1000px;
+    overflow: auto;
+}

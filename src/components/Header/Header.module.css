@@ -1,0 +1,31 @@
+.header{
+    grid-area: header;
+    background-color: aquamarine;
+    padding: 5px 15px;
+}
+
+.header img{
+    height: 100%;
+    border-radius: 50%;
+}
+
+.loginBlock{
+    float: right;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+}
+.loginBlock a{
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 30px;
+}
+.ava{
+    width: 50px;
+}
+.loginBlock span{
+    margin-left: 10px;
+}

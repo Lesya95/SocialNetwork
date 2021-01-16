@@ -1,0 +1,42 @@
+h4{
+    font-size: 24px;
+    color: #ea9d7d;
+    margin-bottom: 15px;
+}
+.newPost{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 40px;
+}
+textarea{
+    resize: none;
+    height: 80px;
+    border: 1px solid #9370d8;
+    background-color: #9370d81c;
+    padding: 10px;
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+textarea:focus {
+    outline: 1px solid #9370d8;
+}
+button{
+    font-size: 16px;
+    line-height: 26px;
+    color: #fff;
+    font-weight: 800;
+    background-color: mediumpurple;
+    border: none;
+    border-radius: 0;
+    cursor: pointer;
+}
+
+.container{
+    padding: 0 20px 0 20px;
+}
+
+button,
+button:active,
+button:focus {
+    outline: none;
+}
