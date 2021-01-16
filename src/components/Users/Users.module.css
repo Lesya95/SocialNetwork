@@ -4,7 +4,7 @@
 .container{
     display: flex;
     padding: 20px 0px;
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
 }
 .imgItem{
     flex: 0 0 130px;
