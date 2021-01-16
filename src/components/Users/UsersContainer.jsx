@@ -25,7 +25,8 @@ class UsersContainer extends React.Component{
     }
 
     getUsers = () => {
-        axios.get(`https://social-network.samuraijs.com/api/1.0/users?page=${this.props.currentPage}&count=${this.props.pageSize}`).then(response => {
+        axios.get(`https://social-network.samuraijs.com/api/1.0/users?page=${this.props.currentPage}&count=${this.props.pageSize}`)
+            .then(response => {
             this.props.setUsers(response.data.items)
         })
     }
@@ -33,7 +34,8 @@ class UsersContainer extends React.Component{
     onPageChanged = (pageNumber) => {
         this.props.toggleIsFetching(true);
         this.props.setCurrentPage(pageNumber);
-        axios.get(`https://social-network.samuraijs.com/api/1.0/users?page=${pageNumber}&count=${this.props.pageSize}`).then(response => {
+        axios.get(`https://social-network.samuraijs.com/api/1.0/users?page=${pageNumber}&count=${this.props.pageSize}`)
+            .then(response => {
             this.props.setUsers(response.data.items)
             this.props.toggleIsFetching(false);
         })
@@ -88,10 +90,6 @@ let mapStateToProps = (state) => {
 //     }
 // };
 
-
-
-// создаю контейнерную компоненту над презинтационной компонентой Users и передаю: 1.функции которая передает обьект с
-// нужной часть state, 2. функцию которая передает обьект с коулбеками.
 export default connect(mapStateToProps, {
     follow,
     unfollow,
