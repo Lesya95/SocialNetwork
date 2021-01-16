@@ -14,8 +14,7 @@
     color: white;
     font-weight: bold;
     font-size: 18px;
-    display: flex;
-    align-items: center;
+
 }
 .loginBlock a{
     color: white;
@@ -28,4 +27,9 @@
 }
 .loginBlock span{
     margin-left: 10px;
+    display: inline-block;
+}
+.block{
+    display: flex;
+    align-items: center;
 }
