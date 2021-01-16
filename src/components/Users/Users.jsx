@@ -48,19 +48,22 @@ let Users = (props) => {
                             </div>
                             <div className={styles.buttonItem}>
                                 {user.followed
-                                    ? <button onClick={() => {
-                                        usersAPI.getUsers2(user.id).then(data => {
+                                    ? <button disabled={props.followingInProgress.some(id => id === user.id)} onClick={() => {
+                                        props.toggleIsFollowingProgress(true, user.id);
+                                        usersAPI.unfollow(user.id).then(data => {
                                             if (data.resultCode === 0) {
                                                 props.unfollow(user.id)
                                             }
-                                            ;
+                                            props.toggleIsFollowingProgress(false, user.id);
                                         })
-                                    }}>unfollowed</button>
-                                    : <button onClick={() => {
-                                        usersAPI.getUsers3(user.id).then(data => {
+                                    }} >unfollowed</button>
+                                    : <button disabled={props.followingInProgress.some(id => id === user.id)}  onClick={() => {
+                                        props.toggleIsFollowingProgress(true, user.id);
+                                        usersAPI.follow(user.id).then(data => {
                                             if (data.resultCode === 0) {
                                                 props.follow(user.id)
                                             }
+                                            props.toggleIsFollowingProgress(false, user.id);
                                         })
                                     }}>followed</button>}
                             </div>

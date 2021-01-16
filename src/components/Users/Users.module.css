@@ -29,6 +29,9 @@ button{
     padding: 5px 20px;
     margin: 25px auto;
 }
+button:disabled{
+    background-color: aquamarine;
+}
 
 .pageNumber{
     font-weight: 600;
