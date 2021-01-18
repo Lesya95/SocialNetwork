@@ -1,10 +1,14 @@
-import React from "react";
+import React from 'react';
 import  styles from './Dialogs.module.css'
-import DialogItems from "./DialogItem/DialogItem";
-import Message from "./Message/Message";
+import DialogItems from './DialogItem/DialogItem';
+import Message from './Message/Message';
+import {Redirect} from 'react-router-dom'
 
 
 const Dialogs = (props) => {
+
+    if(!props.isAuth){ return <Redirect to='/login' />}
+
     let dialogsElements = props.dialogsPage.dialogsData
         .map(dialog => <DialogItems name={dialog.name} key={dialog.id} id={dialog.id} imageSrc={dialog.imageSrc}/>);
 
@@ -32,13 +36,13 @@ const Dialogs = (props) => {
                     <textarea onChange={onMessageChange}
                               className={styles.textarea}
                               ref={newMessageElement}
-                              value={props.dialogsPage.newMessageText} />
+                              value={props.dialogsPage.newMessageText}/>
                     <button className={styles.button} onClick={sendMessage}>Send</button>
                 </div>
             </div>
             <div className={styles.dialogsItems}>
-            {dialogsElements}
-        </div>
+                {dialogsElements}
+            </div>
         </div>
     )
 }

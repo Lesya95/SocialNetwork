@@ -20,7 +20,7 @@
     color: white;
     font-weight: bold;
     font-size: 18px;
-    line-height: 30px;
+    line-height: 44px;
 }
 .ava{
     width: 50px;
@@ -32,4 +32,5 @@
 .block{
     display: flex;
     align-items: center;
+    cursor: pointer;
 }
