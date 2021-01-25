@@ -34,3 +34,8 @@
     align-items: center;
     cursor: pointer;
 }
+.logout{
+    margin: 0 10px;
+    border-radius: 15px;
+    min-width: 120px;
+}
