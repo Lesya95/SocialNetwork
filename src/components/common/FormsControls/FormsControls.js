@@ -1,12 +1,13 @@
 import React from 'react';
 import styles from './FormsControls.module.css'
+import {Field} from "redux-form";
 
-const FormControl = ({input, meta, ...props} ) => {
-    const hasError = meta.touched && meta.error;
+const FormControl = ({input, meta: {touched, error}, children} ) => {
+    const hasError = touched && error;
     return (
         <div className={styles.formControl + ' ' + (hasError ? styles.error : '')}>
-            {props.children}
-            {hasError && <span>{meta.error}</span>}
+            {children}
+            {hasError && <span>{error}</span>}
         </div>
     )
 }
@@ -25,4 +26,15 @@ export const Input = (props) => {
     return (
         <FormControl {...props}><input {...input} {...restProps}></input></FormControl>
     )
+}
+
+export const fieldCreator = (component, name, validate, placeholder, type='text', text=null) => {
+    return <div>
+        <Field component={component}
+               name={name}
+               placeholder={placeholder}
+               validate={validate}
+               type={type}/>
+        {text}
+    </div>
 }

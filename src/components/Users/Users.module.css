@@ -23,7 +23,7 @@
     text-align: center;
 
 }
-button{
+.userButton{
     min-width: 140px;
     display: block;
     padding: 5px 20px;
@@ -31,24 +31,4 @@ button{
 }
 button:disabled{
     background-color: aquamarine;
-}
-
-.pageNumber{
-    font-weight: 600;
-    font-size: 18px;
-    color: indianred;
-    margin: 0 10px;
-    cursor: pointer;
-}
-.activePageNumber{
-    font-weight: 700;
-    color: #9370d8;
-    font-size: 22px;
-    cursor: pointer;
-    margin: 0 11px;
-}
-
-.block {
-    width: 1000px;
-    overflow: auto;
 }

@@ -2,7 +2,7 @@ import React from 'react';
 import styles from './ProfileInfo.module.css';
 import Preloader from "../../common/Preloader/Preloader";
 import userAva from '../../../assets/images/ava.jpg';
-import ProfileStatus from './ProfileStatus'
+import ProfileStatusWithHooks from "./ProfileStatusWithHooks";
 
 const ProfileInfo = (props) => {
 
@@ -22,7 +22,7 @@ const ProfileInfo = (props) => {
                     </div>
                     <div className={styles.userInfo}>
                         <div className="user__name"><h1>{props.profileInfo.fullName}</h1></div>
-                        <ProfileStatus
+                        <ProfileStatusWithHooks
                             status={props.status}
                             updateUserStatus={props.updateUserStatus}
                         />
@@ -30,39 +30,39 @@ const ProfileInfo = (props) => {
                         <div className="user__city">City: Minsk</div>
                         {props.profileInfo.contacts.facebook
                             ? <div>Facebook: {props.profileInfo.contacts.facebook}</div>
-                            : <div></div>
+                            : null
                         }
                         {props.profileInfo.contacts.vk
                             ? <div>Vk: {props.profileInfo.contacts.vk}</div>
-                            : <div></div>
+                            : null
                         }
                         {props.profileInfo.contacts.twitter
                             ? <div>Twitter: {props.profileInfo.contacts.twitter}</div>
-                            : <div></div>
+                            : null
                         }
                         {props.profileInfo.contacts.instagram
                             ? <div>Instagram: {props.profileInfo.contacts.instagram}</div>
-                            : <div></div>
+                            : null
                         }
                         {props.profileInfo.contacts.youtube
                             ? <div>Youtube: {props.profileInfo.contacts.youtube}</div>
-                            : <div></div>
+                            : null
                         }
                         {props.profileInfo.contacts.github
                             ? <div>Github: {props.profileInfo.contacts.github}</div>
-                            : <div></div>
+                            : null
                         }
                         {props.profileInfo.contacts.mainLink
                             ? <div>MainLink: {props.profileInfo.contacts.mainLink}</div>
-                            : <div></div>
+                            : null
                         }
                         {props.profileInfo.contacts.website
                             ? <div className="user__site">{props.profileInfo.contacts.website}</div>
-                            :  <div></div>
+                            :  null
                         }
                         {props.profileInfo.aboutMe
                             ? <div>About Me: {props.profileInfo.aboutMe} </div>
-                            : <div></div>
+                            : null
                         }
 
 
