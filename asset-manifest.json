@@ -1,0 +1,34 @@
+{
+  "files": {
+    "main.css": "/Lesya95/SocialNetwork/static/css/main.4d919a9e.chunk.css",
+    "main.js": "/Lesya95/SocialNetwork/static/js/main.677fd716.chunk.js",
+    "main.js.map": "/Lesya95/SocialNetwork/static/js/main.677fd716.chunk.js.map",
+    "runtime-main.js": "/Lesya95/SocialNetwork/static/js/runtime-main.f986d8d4.js",
+    "runtime-main.js.map": "/Lesya95/SocialNetwork/static/js/runtime-main.f986d8d4.js.map",
+    "static/js/2.dc893d3c.chunk.js": "/Lesya95/SocialNetwork/static/js/2.dc893d3c.chunk.js",
+    "static/js/2.dc893d3c.chunk.js.map": "/Lesya95/SocialNetwork/static/js/2.dc893d3c.chunk.js.map",
+    "static/css/3.07ae908d.chunk.css": "/Lesya95/SocialNetwork/static/css/3.07ae908d.chunk.css",
+    "static/js/3.acab4edd.chunk.js": "/Lesya95/SocialNetwork/static/js/3.acab4edd.chunk.js",
+    "static/js/3.acab4edd.chunk.js.map": "/Lesya95/SocialNetwork/static/js/3.acab4edd.chunk.js.map",
+    "static/css/4.eccba3c7.chunk.css": "/Lesya95/SocialNetwork/static/css/4.eccba3c7.chunk.css",
+    "static/js/4.93c89480.chunk.js": "/Lesya95/SocialNetwork/static/js/4.93c89480.chunk.js",
+    "static/js/4.93c89480.chunk.js.map": "/Lesya95/SocialNetwork/static/js/4.93c89480.chunk.js.map",
+    "static/js/5.7504b110.chunk.js": "/Lesya95/SocialNetwork/static/js/5.7504b110.chunk.js",
+    "static/js/5.7504b110.chunk.js.map": "/Lesya95/SocialNetwork/static/js/5.7504b110.chunk.js.map",
+    "index.html": "/Lesya95/SocialNetwork/index.html",
+    "precache-manifest.d8d4503e2a012767d9ce5358471e5ce0.js": "/Lesya95/SocialNetwork/precache-manifest.d8d4503e2a012767d9ce5358471e5ce0.js",
+    "service-worker.js": "/Lesya95/SocialNetwork/service-worker.js",
+    "static/css/3.07ae908d.chunk.css.map": "/Lesya95/SocialNetwork/static/css/3.07ae908d.chunk.css.map",
+    "static/css/4.eccba3c7.chunk.css.map": "/Lesya95/SocialNetwork/static/css/4.eccba3c7.chunk.css.map",
+    "static/css/main.4d919a9e.chunk.css.map": "/Lesya95/SocialNetwork/static/css/main.4d919a9e.chunk.css.map",
+    "static/js/2.dc893d3c.chunk.js.LICENSE.txt": "/Lesya95/SocialNetwork/static/js/2.dc893d3c.chunk.js.LICENSE.txt",
+    "static/media/ava.jpg": "/Lesya95/SocialNetwork/static/media/ava.4119cbff.jpg",
+    "static/media/preloader.svg": "/Lesya95/SocialNetwork/static/media/preloader.e4399d40.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.f986d8d4.js",
+    "static/js/2.dc893d3c.chunk.js",
+    "static/css/main.4d919a9e.chunk.css",
+    "static/js/main.677fd716.chunk.js"
+  ]
+}
