@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "0cb86b648c26b190dea10d8cc30d520c",
+    "revision": "4adb574353c9df135637986b015be575",
     "url": "/Lesya95/SocialNetwork/index.html"
   },
   {
@@ -12,7 +12,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/Lesya95/SocialNetwork/static/css/4.eccba3c7.chunk.css"
   },
   {
-    "revision": "6d0b525accdfe9c55a8f",
+    "revision": "584c19908ddc5baf5383",
     "url": "/Lesya95/SocialNetwork/static/css/main.4d919a9e.chunk.css"
   },
   {
@@ -36,8 +36,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/Lesya95/SocialNetwork/static/js/5.e4eb1c50.chunk.js"
   },
   {
-    "revision": "6d0b525accdfe9c55a8f",
-    "url": "/Lesya95/SocialNetwork/static/js/main.4ec7e0ad.chunk.js"
+    "revision": "584c19908ddc5baf5383",
+    "url": "/Lesya95/SocialNetwork/static/js/main.e4eda307.chunk.js"
   },
   {
     "revision": "32404640d5499525ee9b",
