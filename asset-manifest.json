@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/Lesya95/SocialNetwork/static/css/main.4d919a9e.chunk.css",
-    "main.js": "/Lesya95/SocialNetwork/static/js/main.e4eda307.chunk.js",
-    "main.js.map": "/Lesya95/SocialNetwork/static/js/main.e4eda307.chunk.js.map",
+    "main.js": "/Lesya95/SocialNetwork/static/js/main.4ec7e0ad.chunk.js",
+    "main.js.map": "/Lesya95/SocialNetwork/static/js/main.4ec7e0ad.chunk.js.map",
     "runtime-main.js": "/Lesya95/SocialNetwork/static/js/runtime-main.56df4188.js",
     "runtime-main.js.map": "/Lesya95/SocialNetwork/static/js/runtime-main.56df4188.js.map",
     "static/js/2.ced8873e.chunk.js": "/Lesya95/SocialNetwork/static/js/2.ced8873e.chunk.js",
@@ -16,7 +16,7 @@
     "static/js/5.e4eb1c50.chunk.js": "/Lesya95/SocialNetwork/static/js/5.e4eb1c50.chunk.js",
     "static/js/5.e4eb1c50.chunk.js.map": "/Lesya95/SocialNetwork/static/js/5.e4eb1c50.chunk.js.map",
     "index.html": "/Lesya95/SocialNetwork/index.html",
-    "precache-manifest.16cf0d5b7978173b3e85aaf496aa28f7.js": "/Lesya95/SocialNetwork/precache-manifest.16cf0d5b7978173b3e85aaf496aa28f7.js",
+    "precache-manifest.2d9c442cbc18dddc6f7899ee572916b0.js": "/Lesya95/SocialNetwork/precache-manifest.2d9c442cbc18dddc6f7899ee572916b0.js",
     "service-worker.js": "/Lesya95/SocialNetwork/service-worker.js",
     "static/css/3.07ae908d.chunk.css.map": "/Lesya95/SocialNetwork/static/css/3.07ae908d.chunk.css.map",
     "static/css/4.eccba3c7.chunk.css.map": "/Lesya95/SocialNetwork/static/css/4.eccba3c7.chunk.css.map",
@@ -29,6 +29,6 @@
     "static/js/runtime-main.56df4188.js",
     "static/js/2.ced8873e.chunk.js",
     "static/css/main.4d919a9e.chunk.css",
-    "static/js/main.e4eda307.chunk.js"
+    "static/js/main.4ec7e0ad.chunk.js"
   ]
 }
