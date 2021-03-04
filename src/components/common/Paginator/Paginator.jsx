@@ -1,7 +1,7 @@
 import React, {useState} from "react";
 import styles from './Paginator.module.css'
 
-let Paginator = ({totalUsersCount, pageSize, currentPage, onPageChanged, portionSize = 21}) => {
+let Paginator = ({totalUsersCount, pageSize, currentPage, onPageChanged, portionSize = 15}) => {
     let pagesCount = Math.ceil(totalUsersCount / pageSize);
     let pages = [];
     for (let p = 1; p <= pagesCount; p++) {
@@ -13,7 +13,7 @@ let Paginator = ({totalUsersCount, pageSize, currentPage, onPageChanged, portion
     let rightPortionPageNumber = portionNumber * portionSize
 
     return <div className={styles.paginator}>
-        {portionNumber > 1 && <button className={styles.paginatorButton} onClick={() => {setPortionNumber(portionNumber - 1)}}>{" << "}</button>}
+        {portionNumber > 1 && <button className={styles.paginatorButton} onClick={() => {setPortionNumber(portionNumber - 1)}}>{" < "}</button>}
         {pages
             .filter(p => p >= leftPortionPageNumber && p <=rightPortionPageNumber)
             .map(p => {
@@ -26,7 +26,7 @@ let Paginator = ({totalUsersCount, pageSize, currentPage, onPageChanged, portion
                       }}
                 >{p}</span>)})
         }
-        {portionCount > portionNumber && <button className={styles.paginatorButton} onClick={() => {setPortionNumber(portionNumber + 1)}}>{" >> "}</button>}
+        {portionCount > portionNumber && <button className={styles.paginatorButton} onClick={() => {setPortionNumber(portionNumber + 1)}}>{" > "}</button>}
     </div>
 }
 

@@ -1,77 +1,97 @@
-import React from 'react';
+import React, {useState} from 'react';
 import styles from './ProfileInfo.module.css';
 import Preloader from "../../common/Preloader/Preloader";
 import userAva from '../../../assets/images/ava.jpg';
 import ProfileStatusWithHooks from "./ProfileStatusWithHooks";
+import ProfileDataForm from "./ProfileDataForm";
 
-const ProfileInfo = (props) => {
 
-    if(!props.profileInfo){
+
+const ProfileInfo = ({profileInfo, isOwner, saveUserData, ...props}) => {
+
+    let [editMode, setEditMode] = useState(false);
+
+    const onMainPhotoSelected = (e) => {
+        if (e.target.files.length) {
+            props.savePhoto(e.target.files[0])
+        }
+    }
+
+    const onSubmit = (formData) => {
+        saveUserData(formData).then(() => {
+            setEditMode(false);
+        })
+    }
+
+    if(!profileInfo){
         return <Preloader />
     } else {
         return (
             <div>
                 <div className={styles.image}>
-                    <img src="https://i.playground.ru/p/4T0RQBh-SE3XRAZN7gtGww.png" alt="img" />
+                    <img src="https://uploadfile.bizhizu.cn/up/0c/61/27/0c6127d7f40b099800fd5e2c33b6e9d1.jpg.source.jpg" alt="img" />
                 </div>
                 <div className={styles.user}>
-                    <div className={styles.userImg}>
-                        <img src={props.profileInfo.photos.large !=  null
-                            ? props.profileInfo.photos.large
-                            : userAva} alt="userImg" />
+                    <div className={styles.containerUserImg}>
+                        <div className={styles.userImg}>
+                            <img src={profileInfo.photos.large || userAva} alt="userImg" />
+                            {isOwner && <input type="file" onChange={onMainPhotoSelected}/>}
+                        </div>
                     </div>
                     <div className={styles.userInfo}>
-                        <div className="user__name"><h1>{props.profileInfo.fullName}</h1></div>
+                        <div className="user__name"><h1>{profileInfo.fullName}</h1></div>
                         <ProfileStatusWithHooks
                             status={props.status}
                             updateUserStatus={props.updateUserStatus}
                         />
-                        <div className="user__birthday">Date of Birth:  8 april</div>
-                        <div className="user__city">City: Minsk</div>
-                        {props.profileInfo.contacts.facebook
-                            ? <div>Facebook: {props.profileInfo.contacts.facebook}</div>
-                            : null
+                        {editMode
+                            ? <ProfileDataForm initialValues={profileInfo} profileInfo={profileInfo} onSubmit={onSubmit}/>
+                            : <ProfileData profileInfo={profileInfo}
+                                           isOwner={isOwner}
+                                           goToEditMode={() => setEditMode(true)}
+                            />
                         }
-                        {props.profileInfo.contacts.vk
-                            ? <div>Vk: {props.profileInfo.contacts.vk}</div>
-                            : null
-                        }
-                        {props.profileInfo.contacts.twitter
-                            ? <div>Twitter: {props.profileInfo.contacts.twitter}</div>
-                            : null
-                        }
-                        {props.profileInfo.contacts.instagram
-                            ? <div>Instagram: {props.profileInfo.contacts.instagram}</div>
-                            : null
-                        }
-                        {props.profileInfo.contacts.youtube
-                            ? <div>Youtube: {props.profileInfo.contacts.youtube}</div>
-                            : null
-                        }
-                        {props.profileInfo.contacts.github
-                            ? <div>Github: {props.profileInfo.contacts.github}</div>
-                            : null
-                        }
-                        {props.profileInfo.contacts.mainLink
-                            ? <div>MainLink: {props.profileInfo.contacts.mainLink}</div>
-                            : null
-                        }
-                        {props.profileInfo.contacts.website
-                            ? <div className="user__site">{props.profileInfo.contacts.website}</div>
-                            :  null
-                        }
-                        {props.profileInfo.aboutMe
-                            ? <div>About Me: {props.profileInfo.aboutMe} </div>
-                            : null
-                        }
-
 
                     </div>
                 </div>
             </div>
         )
     }
-
 };
+
+const Contact = ({contactTitle, contactValue}) => {
+    return contactValue ? <li>{contactTitle} : {contactValue}</li> : null
+}
+
+const ProfileData = ({profileInfo, isOwner, goToEditMode}) => {
+    return <div>
+
+        <div>Looking for a job: {profileInfo.lookingForAJob
+            ? 'yes'
+            : 'no'}
+        </div>
+        {profileInfo.lookingForAJob && <div>My professional skills:
+            {profileInfo.lookingForAJobDescription
+                ? profileInfo.lookingForAJobDescription
+                : null}
+        </div>
+        }
+        <div>About me:  {profileInfo.aboutMe
+            ? profileInfo.aboutMe
+            : null}
+        </div>
+
+        <div>Contacts:
+            <ul>
+                {Object.keys(profileInfo.contacts)
+                .map(key => {
+                    return <Contact key={key} contactTitle={key}
+                                    contactValue={profileInfo.contacts[key]}
+                    />})}
+            </ul>
+        </div>
+        {isOwner && <div><button className={styles.button} onClick={goToEditMode}>Edit</button></div>}
+    </div>
+}
 
 export default ProfileInfo;

@@ -1,12 +1,12 @@
 h4{
     font-size: 24px;
-    color: #ea9d7d;
+    color: #93C088;
     margin-bottom: 15px;
 }
 .newPost{
+    margin-bottom: 40px;
     display: flex;
     flex-direction: column;
-    margin-bottom: 40px;
 }
 textarea{
     resize: none;
@@ -16,6 +16,7 @@ textarea{
     padding: 10px;
     font-size: 14px;
     margin-bottom: 5px;
+    width: 97.5%;
 }
 textarea:focus {
     outline: 1px solid #9370d8;

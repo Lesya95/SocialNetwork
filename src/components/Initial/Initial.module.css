@@ -1,0 +1,10 @@
+.title{
+    font-weight: bold;
+    font-size: 28px;
+    color: crimson;
+    text-align: center;
+    padding: 50px 10px 30px;
+}
+.img{
+    max-width: 1000px;
+}

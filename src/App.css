@@ -1,17 +1,8 @@
-.app-wrapper {
-  display: grid;
-  grid-template-areas: 
-  "header header"
-  "nav content";
-  grid-template-rows: 60px 1fr;
-  grid-template-columns: 2fr 10fr;
-  grid-gap: 10px;
-  margin: 0 auto;
-  width: 1200px;
-  height: 100vh;
+.container{
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
 }
-
 .app-wrapper-content{
-  grid-area: content;
+    width: 100%;
 }
-

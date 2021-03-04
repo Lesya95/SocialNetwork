@@ -1,54 +1,69 @@
 .image{
     overflow: hidden;
-    height: 250px;
+    height: 350px;
 }
 .image img{
     width: 100%;
     height: 100%;
     object-fit: cover;
+    border-radius: 0 0 20px 20px;
 }
 
 .user {
     padding: 25px 20px;
-    color: #fff;
+    color: lightslategrey;
     font-weight: 600;
+}
+.containerUserImg{
     display: flex;
-    background-color: darkkhaki;
+    justify-content: center;
+    margin-top: -200px;
 }
 .userImg {
-    height: 200px;
-    width: 200px;
 }
 
 .userImg img{
-    width: 100%;
-    height: 100%;
+    display: block;
+    width: 200px;
+    height: 200px;
     border-radius: 50%;
+    border: 4px solid #fff;
     object-fit: cover;
 }
 .userInfo {
-    padding: 0 25px;
     line-height: 24px;
-
 }
 
 h1{
-    margin: 0 0 30px 0;
+    margin: 10px 0 30px 0;
+    text-align: center;
+    color: #2B0A15;
+    font-weight: 600;
 }
 .statusBlock{
     margin-bottom: 15px;
+    text-align: center;
 }
 .status{
     font-size: 20px;
-    font-weight: bold;
-    color: #990999;
-    text-decoration: underline;
+    font-weight: 600;
+    color: #2B0A15;
     cursor: pointer;
 }
 .statusInput{
     font-size: 20px;
-    font-weight: bold;
-    color: #990999;
+    color: #93C088;
     border: none;
     outline: none;
+}
+
+.button{
+    background-color: #FA8565;
+    padding: 1px 30px;
+    border-radius: 30px;
+    margin-bottom: 15px;
+    margin-top: 25px;
+}
+ul{
+    margin: 0;
 }
