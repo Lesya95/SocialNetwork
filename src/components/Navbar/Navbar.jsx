@@ -10,9 +10,11 @@ const Navbar = (props) => {
         .map(link => <NavbarItem name={link.name} url={link.url}  key={link.id}/>);
 
     return (
-        <nav className={styles.nav}>
-            {linkElements}
-        </nav>
+        <aside className={props.burgerEditMode ? styles.aside + " " + styles.active : styles.aside} >
+            <nav>
+                {linkElements}
+            </nav>
+        </aside>
     )
 };
 

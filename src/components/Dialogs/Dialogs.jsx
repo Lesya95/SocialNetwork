@@ -21,14 +21,14 @@ const Dialogs = (props) => {
 
     return (
         <div className={styles.dialogs}>
+            <div className={styles.dialogsItems}>
+                {dialogsElements}
+            </div>
             <div className={styles.messages}>
                 <div className={styles.messagesBlock}>
                     {messagesElements}
                 </div>
                 <DialogsReduxForm onSubmit={sendMessage} />
-            </div>
-            <div className={styles.dialogsItems}>
-                {dialogsElements}
             </div>
         </div>
     )

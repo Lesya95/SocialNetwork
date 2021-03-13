@@ -9,7 +9,7 @@ const ProfileDataForm = ({handleSubmit, profileInfo, error}) => {
         {error && <div className={styles.totalError}>{error}</div>}
         <div>Full Name: {fieldCreator(Input, 'fullName', [], 'Full name')}</div>
 
-        <div>Looking for a job:
+        <div><span>Looking for a job:</span>
             {fieldCreator(Input, 'lookingForAJob', [], '', 'checkbox')}
         </div>
         <div>My professional skills:
@@ -19,7 +19,7 @@ const ProfileDataForm = ({handleSubmit, profileInfo, error}) => {
             {fieldCreator(Textarea, 'aboutMe', [], 'AboutMe')}
         </div>
 
-        <div>Contacts: {Object.keys(profileInfo.contacts)
+        <div>{Object.keys(profileInfo.contacts)
             .map(key => {
                 return <div key={key}> {key}: {fieldCreator(Input, 'contacts.' + key, [], key)}
                 </div>})}

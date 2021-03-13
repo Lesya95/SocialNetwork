@@ -37,7 +37,7 @@ const NewPostForm = (props) => {
                     placeholder={'Enter new post'}
                     validate={[required, maxLength15]}
                 />
-                <button>Add post</button>
+                <button className={styles.button}>Add post</button>
             </div>
         </form>
     )

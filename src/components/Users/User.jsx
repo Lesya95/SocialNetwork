@@ -13,12 +13,8 @@ let User = ({user, followingInProgress, follow, unfollow}) => {
                                 </NavLink>
                             </div>
                             <div className={styles.infoItem}>
-                                <div>{user.name}</div>
-                                <div>{user.status}</div>
-                            </div>
-                            <div className={styles.locationItem}>
-                                <div>{'user.location.country'}</div>
-                                <div>{'user.location.city'}</div>
+                                <div className={styles.userName}>{user.name}</div>
+                                <div><span>{user.status}</span></div>
                             </div>
                             <div className={styles.buttonItem}>
                                 {user.followed

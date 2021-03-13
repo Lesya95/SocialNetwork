@@ -1,17 +1,12 @@
-*{
-    box-sizing: border-box;
-}
 .dialogs{
     display: grid;
-    grid-template-columns: 10fr 2fr;
+    grid-template-columns: 2fr 10fr;
     height: 100%;
 }
 
 .dialogsItems{
     padding: 10px;
-    border-left: 1px solid #ea9d7d;
-    box-shadow: -4px 2px 5px #ea9d7d;
-    background-color: #ffebcd66;
+    background-color: #ffebcd2b;
 }
 .dialogsItems .active{
     color: #9370d8;
@@ -22,8 +17,9 @@
     font-weight: 600;
     line-height: 40px;
     text-align: center;
-    border-bottom: 1px solid #ea9d7d;
-    margin-bottom: 20px;
+    padding: 10px 0px;
+    display: flex;
+    justify-content: space-between;
 }
 
 .messages{
@@ -58,7 +54,6 @@
     display: flex;
     height: 60px;
     flex-wrap: nowrap;
-    padding: 0 10px;
     margin-bottom: 35px;
     width: 100%;
 }
@@ -72,11 +67,49 @@
     padding: 8px 25px;
     border-radius: 10px;
     margin: 0px 0px 0px 20px;
-    height: 100%;
+    background-color: #93C088;
 }
 
 .button,
 .button:active,
 .button:focus {
     outline: none;
+}
+
+@media (max-width: 1000px) {
+    .messagesBlock{
+        padding: 30px 30px 10px;
+    }
+}
+
+@media (max-width: 767px) {
+    .messagesBlock{
+        padding: 30px 0px 10px;
+    }
+    .dialogsItems{
+        background-color: #ffffff;
+    }
+    .messages{
+        padding: 0 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .img{
+        display: none;
+    }
+    .message p{
+        padding: 10px 15px;
+        margin: 0 0 15px 0;
+    }
+    .messages{
+        padding: 0 10px 0px;
+    }
+    .button{
+        margin: 0px 0px 0px 5px;
+    }
+    .newMessage .textarea{
+        font-size: 13px;
+        padding: 5px;
+    }
 }

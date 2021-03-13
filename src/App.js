@@ -39,28 +39,31 @@ class App extends React.Component {
             return <Preloader/>
         }
         return (
-            <div className="app-wrapper">
+            <div>
                 <HeaderContainer/>
                 <div className="container">
-                    <NavbarContainer/>
-                    <div className='app-wrapper-content'>
-                        <Switch >
-                            <Route path='/profile/:userId?'
-                                   render={() => <ProfileContainer/>}/>
-                            <Route path='/dialogs'
-                                   render={withSuspense(DialogsContainer)}/>
-                            <Route path='/users'
-                                   render={withSuspense(UsersContainer)}/>
-                            <Route path='/login'
-                                   render={withSuspense(LoginPage)}/>
-                            <Route path='/news' render={() => <News/>}/>
-                            <Route path='/videos' render={() => <Videos/>}/>
-                            <Route path='/musics' render={() => <Musics/>}/>
-                            <Route path='/settings' render={() => <Settings/>}/>
-                            <Route exact path='/' render={() => <Initial/>}/>
-                            <Route path='*' render={() => <div> 404 NOT FOUND </div>}/>
-                        </Switch>
+                    <div className={"app-wrapper"}>
+                        <NavbarContainer/>
+                        <div className='app-content'>
+                            <Switch >
+                                <Route path='/profile/:userId?'
+                                       render={() => <ProfileContainer/>}/>
+                                <Route path='/dialogs'
+                                       render={withSuspense(DialogsContainer)}/>
+                                <Route path='/users'
+                                       render={withSuspense(UsersContainer)}/>
+                                <Route path='/login'
+                                       render={withSuspense(LoginPage)}/>
+                                <Route path='/news' render={() => <News/>}/>
+                                <Route path='/videos' render={() => <Videos/>}/>
+                                <Route path='/musics' render={() => <Musics/>}/>
+                                <Route path='/settings' render={() => <Settings/>}/>
+                                <Route exact path='/' render={() => <Initial/>}/>
+                                <Route path='*' render={() => <div> 404 NOT FOUND </div>}/>
+                            </Switch>
+                        </div>
                     </div>
+
                 </div>
             </div>
         );

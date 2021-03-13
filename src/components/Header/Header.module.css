@@ -1,36 +1,58 @@
 .header{
-    display: flex;
-    width: 100%;
-    height: 60px;
-    background-color: #93C088;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 50;
     padding: 5px 15px;
+    align-items: center;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    width: 100%;
 }
-.container{
+.header:before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #93C088;
+}
+.headerContainer{
+    position: relative;
+    z-index: 2;
     display: flex;
-    width: 1200px;
-    margin: 0 auto;
     align-items: center;
     justify-content: space-between;
 }
-.header img{
-    height: 100%;
+.logo{
+    display: flex;
+    align-items: center;
+}
+.logoImg,
+.ava{
+    width: 60px;
     border-radius: 50%;
 }
 
 .loginBlock{
-    color: white;
-    font-weight: bold;
-    font-size: 18px;
+    display: flex;
+    align-items: center;
 }
+.login{
+    margin-right: 10px;
+}
+.login a{
+    line-height: 40px;
+}
+
 .loginBlock a{
     color: white;
     font-weight: bold;
     font-size: 18px;
-    line-height: 44px;
 }
-.ava{
-    width: 50px;
-}
+
 .loginBlock span{
     margin-left: 10px;
     display: inline-block;
@@ -41,8 +63,67 @@
     cursor: pointer;
 }
 .logout{
-    margin: 0 10px;
+    padding: 0 15px;
+    margin: 0 0 0 15px;
     border-radius: 15px;
     min-width: 120px;
     background-color: #FA8565;
+}
+
+@media (max-width: 767px) {
+    .headerBurger{
+        display: block;
+        position: relative;
+        width: 30px;
+        height: 20px;
+        margin: 0 15px;
+    }
+    .headerBurger span{
+        position: absolute;
+        background-color: #ffffff;
+        left: 0;
+        width: 100%;
+        height: 2px;
+        top: 9px;
+    }
+    .headerBurger:before,
+    .headerBurger:after{
+        content: '';
+        position: absolute;
+        background-color: #ffffff;
+        width: 100%;
+        height: 2px;
+        left: 0;
+    }
+    .headerBurger:before{
+        top: 0;
+    }
+    .headerBurger:after{
+        bottom: 0;
+    }
+    .headerBurger.active:before {
+        transform: rotate(45deg);
+        top: 9px;
+    }
+    .headerBurger.active:after {
+        transform: rotate(-45deg);
+        bottom: 9px;
+    }
+    .headerBurger.active span{
+        transform: scale(0);
+    }
+    .logoImg,
+    .ava{
+        width: 40px;
+    }
+}
+
+@media (max-width: 450px) {
+    .logoImg{
+        display: none;
+    }
+    .headerBurger{
+        margin: 0 15px 0 5px;
+    }
+
 }

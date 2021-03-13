@@ -5,6 +5,7 @@ import Navbar from "./Navbar";
 let mapStateToProps = (state) => {
     return {
         navbarItem: state.sidebar.sidebar,
+        burgerEditMode: state.sidebar.burgerEditMode,
     }
 }
 

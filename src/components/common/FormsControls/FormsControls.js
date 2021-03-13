@@ -16,7 +16,7 @@ export const Textarea = (props) => {
     const {input, meta, ...restProps} = props;
 
     return (
-        <FormControl {...props}><textarea {...input} {...restProps}></textarea></FormControl>
+        <FormControl {...props}><textarea className={styles.textarea} {...input} {...restProps}></textarea></FormControl>
     )
 }
 
@@ -29,7 +29,7 @@ export const Input = (props) => {
 }
 
 export const fieldCreator = (component, name, validate, placeholder, type='text', text=null) => {
-    return <div>
+    return <div className={styles.containerForm}>
         <Field component={component}
                name={name}
                placeholder={placeholder}

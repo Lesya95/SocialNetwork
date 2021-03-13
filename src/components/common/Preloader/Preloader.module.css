@@ -5,6 +5,7 @@
     bottom: 0;
     right: 0;
     background-color: #fff;
+    z-index: 100;
 }
 .preloaderContainer{
     width: 100%;

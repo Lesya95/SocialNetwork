@@ -40,7 +40,7 @@ class ProfileStatus extends React.Component {
             <div className={styles.statusBlock}>
                 {!this.state.editMode &&
                     <div className={styles.status}>
-                        <span onDoubleClick={this.activateEditMode}>
+                        <span onClick={this.activateEditMode}>
                             {this.props.status || 'not status'}
                         </span>
                     </div>

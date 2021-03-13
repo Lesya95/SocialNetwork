@@ -18,7 +18,7 @@ const Login = (props) => {
     }
 
     return (
-        <div>
+        <div className="login">
             <h1>Login</h1>
             <LoginReduxForm onSubmit={onSubmit} captchaUrl={props.captchaUrl}/>
         </div>
@@ -30,7 +30,10 @@ const LoginForm = ({handleSubmit, error, captchaUrl}) => {
             <form onSubmit={handleSubmit}>
                 {fieldCreator( Input,'email', [required], 'Email',)}
                 {fieldCreator( Input,'password', [required], 'Password', 'password')}
-                {fieldCreator( Input,'rememberMe', [], null, 'checkbox', 'remember me')}
+                <div className={styles.checkbox}>
+                    {fieldCreator( Input,'rememberMe', [], null, 'checkbox', 'remember me')}
+                </div>
+
                 {error && <div className={styles.totalError}>{error}</div>}
                 {captchaUrl && <img src={captchaUrl} alt="img"/>}
                 {captchaUrl && fieldCreator(Input, 'captcha', [required], 'Symbols from image', 'text')}

@@ -4,7 +4,7 @@ import Preloader from "../../common/Preloader/Preloader";
 import userAva from '../../../assets/images/ava.jpg';
 import ProfileStatusWithHooks from "./ProfileStatusWithHooks";
 import ProfileDataForm from "./ProfileDataForm";
-
+import iconPhoto from "../../../assets/images/iconPhone.png"
 
 
 const ProfileInfo = ({profileInfo, isOwner, saveUserData, ...props}) => {
@@ -35,7 +35,13 @@ const ProfileInfo = ({profileInfo, isOwner, saveUserData, ...props}) => {
                     <div className={styles.containerUserImg}>
                         <div className={styles.userImg}>
                             <img src={profileInfo.photos.large || userAva} alt="userImg" />
-                            {isOwner && <input type="file" onChange={onMainPhotoSelected}/>}
+                                {isOwner && <div className={styles.uploadingPhoto}>
+                                    <input id='file'  type="file" onChange={onMainPhotoSelected}/>
+                                    <label className={styles.label} htmlFor='file'>
+                                        <img className={styles.iconPhoto} src={iconPhoto} alt="iconPhoto"/>
+                                    </label>
+                                </div>
+                                }
                         </div>
                     </div>
                     <div className={styles.userInfo}>
@@ -81,7 +87,7 @@ const ProfileData = ({profileInfo, isOwner, goToEditMode}) => {
             : null}
         </div>
 
-        <div>Contacts:
+        <div>
             <ul>
                 {Object.keys(profileInfo.contacts)
                 .map(key => {
