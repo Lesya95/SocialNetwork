@@ -62,13 +62,20 @@ export const getAuthUserData = () => async (dispatch) => {
         let {id, email, login} = data.data;
         dispatch(setAuthUserData(id, email, login, true));
     }
+    return data;
 }
 
 export const login = (email, password, rememberMe, captcha) => async (dispatch) => {
     let data = await authAPI.login(email, password, rememberMe, captcha);
 
     if (data.resultCode == 0) {
-        dispatch(getAuthUserData());
+        let resultPromis = dispatch(getAuthUserData());
+        resultPromis.then(response => {
+            let authId = response.data.id;
+            profileAPI.getUserProfile(authId).then(response => {
+                    dispatch(setAuthUserImg(response.photos.small))
+                })
+        })
     } else {
         if (data.resultCode === 10) {
             dispatch(getCaptchaUrl())
