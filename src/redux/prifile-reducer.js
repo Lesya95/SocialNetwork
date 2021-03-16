@@ -1,5 +1,6 @@
 import {profileAPI, usersAPI} from "../api/api";
 import {stopSubmit} from "redux-form";
+import {setAuthUserImg} from "./auth-reducer";
 
 const ADD_POST = 'profile/ADD-POST';
 const SET_USER_PROFILE = 'profile/SET_USER_PROFILE';
@@ -104,6 +105,7 @@ export const savePhoto = (file) => async (dispatch) => {
     const data = await profileAPI.savePhoto(file);
     if (data.resultCode === 0) {
         dispatch(savePhotoSuccess(data.data.photos));
+        dispatch(setAuthUserImg(data.data.photos.small))
     }
 }
 export const saveUserData = (formData) => async (dispatch, getState) => {
